@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Product Details</h1>
+    <div class="table-responsive">
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>ID</th>
+                <td th:text="${product.id}">Product ID</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td th:text="${product.title}">Product Title</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td th:text="${product.price}">Product Price</td>
+            </tr>
+            <tr>
+                <th>Card Size</th>
+                <td th:text="${product.cardSize}">Card Size</td>
+            </tr>
+            <tr>
+                <th>Set</th>
+                <td th:text="${product.set}">Set</td>
+            </tr>
+            <tr>
+                <th>Character</th>
+                <td th:text="${product.character}">Character</td>
+            </tr>
+            <tr>
+                <th>Rarity</th>
+                <td th:text="${product.rarity}">Rarity</td>
+            </tr>
+            <tr>
+                <th>Game</th>
+                <td th:text="${product.game}">Game</td>
+            </tr>
+            <tr>
+                <th>Language</th>
+                <td th:text="${product.language}">Language</td>
+            </tr>
+            <tr>
+                <th>Manufacturer</th>
+                <td th:text="${product.manufacture}">Manufacturer</td>
+            </tr>
+            <tr>
+                <th>Stage</th>
+                <td th:text="${product.stage}">Stage</td>
+            </tr>
+            <tr>
+                <th>Features</th>
+                <td th:text="${product.features}">Features</td>
+            </tr>
+            <tr>
+                <th>Card Number</th>
+                <td th:text="${product.cardNumber}">Card Number</td>
+            </tr>
+            <tr>
+                <th>Card Type</th>
+                <td th:text="${product.cardType}">Card Type</td>
+            </tr>
+            <tr>
+                <th>Country/Region of Manufacture</th>
+                <td th:text="${product.country}">Country</td>
+            </tr>
+            <tr>
+                <th>Finish</th>
+                <td th:text="${product.finish}">Finish</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

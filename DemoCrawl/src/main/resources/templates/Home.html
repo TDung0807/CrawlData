@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Products</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .horizontal-cards {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 20px; /* Optional: Add margin between rows */
+        }
+        .card {
+            flex: 0 0 auto;
+            margin-right: 15px; /* Optional: Add margin between cards */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>List of Products</h1>
+    <div class="horizontal-cards">
+        <div th:each="product : ${products}" class="card mb-3" style="width: 18rem;">
+            <img class="card-img-top" th:src="${product.imgUrl}" alt="Card image cap">
+            <div class="card-body">
+                <a th:href="'/product/get/' + ${product.id}">
+                    <h5 class="card-title" th:text="${product.id}">ID</h5>
+                </a>
+                <p class="card-text" th:text="${product.title}">Description</p>
+                <p class="card-text" th:text="${product.price}">Price</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
